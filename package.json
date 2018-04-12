@@ -1,0 +1,18 @@
+{
+  "name": "viktar3000",
+  "version": "0.0.1",
+  "description": "this is a",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "gulp": "^3.9.1",
+    "gulp-angular-protractor": "^1.1.1",
+    "jasmine": "^3.1.0",
+    "protractor": "^5.3.0"
+  }
+}
