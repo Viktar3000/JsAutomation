@@ -15,11 +15,10 @@ describe('User should be able to login', function() {
       const browser2 =await browser.forkNewDriverInstance().ready;
       browser2.ignoreSynchronization = true;
       await browser2.get("http://gmail.com");
-      loginPage.login('viktar30000@gmail.com', "Qwe123!!1");
-      element(by.css("span.y2")).isDisplayed().then(isDisplayed => {
-        expect(isDisplayed).to.equal(true);
-      });
-      
-  
+      const browser2LoginPage = new LoginPage(browser2);
+      browser2LoginPage.login('viktar30000@gmail.com', "Qwe123!!1");
+      const browser2MainPage = new MainPage(browser2);
+      await browser2MainPage.checkEmail();
+
       });
   });

@@ -1,5 +1,7 @@
 const AbstractPage = require("./AbstractPage");
 const EC = protractor.ExpectedConditions;
+const expect = require("chai").expect;
+
 
 class LoginPage extends AbstractPage {
  
