@@ -1,11 +1,12 @@
 class AbstractPage {
-    constructor(customBrowser){
+
+    constructor(customBrowser) {
         if (customBrowser) {
             this.browser = customBrowser;
         } else {
             this.browser = browser;
         }
-
     }
+
 }
 module.exports = AbstractPage;

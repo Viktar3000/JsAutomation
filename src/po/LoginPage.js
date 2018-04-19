@@ -2,7 +2,6 @@ const AbstractPage = require("./AbstractPage");
 const EC = protractor.ExpectedConditions;
 const expect = require("chai").expect;
 
-
 class LoginPage extends AbstractPage {
  
     constructor (customBrowser){
@@ -15,12 +14,14 @@ class LoginPage extends AbstractPage {
     }
      
     async login(username, password) {
+
         await this.userNameInput.sendKeys(username);
         await this.identifierButton.click();
         await browser.wait(EC.visibilityOf(this.userPassword), 10000);
         await this.userPassword.sendKeys(password);
         await browser.wait(EC.elementToBeClickable(this.passwordButton), 5000);
         await this.passwordButton.click();
+        
     }
 }
 module.exports = LoginPage;
