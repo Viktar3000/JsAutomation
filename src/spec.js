@@ -10,8 +10,7 @@ describe('User should be able to login', function() {
       loginPage.login("testmaca1@gmail.com", "Qwe123!!1");
       const mainPage = await new MainPage();
       mainPage.sendMessage("viktar30000@gmail.com", "Hello World");
-      
-     
+  
       const browser2 =await browser.forkNewDriverInstance().ready;
       browser2.ignoreSynchronization = true;
       await browser2.get("http://gmail.com");
@@ -20,5 +19,5 @@ describe('User should be able to login', function() {
       const browser2MainPage = new MainPage(browser2);
       await browser2MainPage.checkEmail();
 
-      });
-  });
+    });
+});
